@@ -3,15 +3,18 @@ package frc.team4159.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
+import frc.team4159.robot.subsystems.Arm;
 import frc.team4159.robot.subsystems.Drivetrain;
 
 public class Robot extends TimedRobot {
     private static Drivetrain drivetrain;
-    private OI oi;
+    private static Arm arm;
+    private static OI oi;
 
     @Override
     public void robotInit() {
         drivetrain = Drivetrain.getInstance();
+        arm = Arm.getInstance();
         oi = OI.getInstance();
     }
 
@@ -47,5 +50,8 @@ public class Robot extends TimedRobot {
 
     public static Drivetrain getDrivetrain() {
         return drivetrain;
+    }
+    public static Arm getArm() {
+        return arm;
     }
 }

@@ -16,9 +16,13 @@ public class OI {
     private Joystick leftJoy;
     private Joystick rightJoy;
 
+    private Joystick armJoy;
+
     private OI() {
         leftJoy = new Joystick(0);
         rightJoy = new Joystick(1);
+
+        armJoy = new Joystick(2);
     }
 
     public double getLeftJoy() {
@@ -27,5 +31,9 @@ public class OI {
 
     public double getRightJoy() {
         return rightJoy.getY();
+    }
+
+    public double getArmJoy() {
+        return armJoy.getY();
     }
 }
