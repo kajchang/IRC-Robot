@@ -1,6 +1,5 @@
 package frc.team4159.robot;
 
-import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -50,6 +49,6 @@ public class OI {
     }
 
     public boolean getOuttakeButton() {
-        return intakeButton.get();
+        return outtakeButton.get();
     }
 }
