@@ -4,17 +4,20 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
 import frc.team4159.robot.subsystems.Arm;
+import frc.team4159.robot.subsystems.Claw;
 import frc.team4159.robot.subsystems.Drivetrain;
 
 public class Robot extends TimedRobot {
     private static Drivetrain drivetrain;
     private static Arm arm;
+    private static Claw claw;
     private static OI oi;
 
     @Override
     public void robotInit() {
         drivetrain = Drivetrain.getInstance();
         arm = Arm.getInstance();
+        claw = Claw.getInstance();
         oi = OI.getInstance();
     }
 
@@ -53,5 +56,11 @@ public class Robot extends TimedRobot {
     }
     public static Arm getArm() {
         return arm;
+    }
+    public static Claw getClaw() {
+        return claw;
+    }
+    public static OI getOI() {
+        return  oi;
     }
 }

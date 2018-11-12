@@ -15,12 +15,19 @@ public class MoveArm extends Command {
     }
 
     @Override
+    protected void end() {
+        arm.setArmSpeed(0);
+    }
+
+    @Override
     protected boolean isFinished() {
         return false;
     }
 
     public MoveArm() {
-        oi = OI.getInstance();
+        oi = Robot.getOI();
         arm = Robot.getArm();
+
+        requires(arm);
     }
 }
