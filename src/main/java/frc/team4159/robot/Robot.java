@@ -7,7 +7,7 @@ import frc.team4159.robot.subsystems.Drivetrain;
 
 public class Robot extends TimedRobot {
     private static Drivetrain drivetrain;
-    private OI oi;
+    private static OI oi;
 
     @Override
     public void robotInit() {
@@ -47,5 +47,9 @@ public class Robot extends TimedRobot {
 
     public static Drivetrain getDrivetrain() {
         return drivetrain;
+    }
+
+    public static OI getOI() {
+        return oi;
     }
 }

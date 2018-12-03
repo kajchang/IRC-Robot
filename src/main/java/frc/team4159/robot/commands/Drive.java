@@ -15,12 +15,24 @@ public class Drive extends Command {
     }
 
     @Override
+    protected void end() {
+        drivetrain.setSpeed(0, 0);
+    }
+
+    @Override
+    protected void interrupted() {
+        end();
+    }
+
+    @Override
     protected boolean isFinished() {
         return false;
     }
 
     public Drive() {
-        oi = OI.getInstance();
+        oi = Robot.getOI();
         drivetrain = Robot.getDrivetrain();
+
+        requires(drivetrain);
     }
 }
