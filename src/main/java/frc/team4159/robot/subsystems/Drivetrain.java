@@ -31,6 +31,6 @@ public class Drivetrain extends Subsystem {
 
     @Override
     protected void initDefaultCommand() {
-        new Drive();
+        setDefaultCommand(new Drive());
     }
 }
