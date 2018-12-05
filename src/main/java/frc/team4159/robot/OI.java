@@ -1,6 +1,7 @@
 package frc.team4159.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController;
 
 public class OI {
     private static OI instance;
@@ -13,19 +14,17 @@ public class OI {
         return instance;
     }
 
-    private Joystick leftJoy;
-    private Joystick rightJoy;
+    private XboxController controller;
 
     private OI() {
-        leftJoy = new Joystick(0);
-        rightJoy = new Joystick(1);
+        controller = new XboxController(0);
     }
 
     public double getLeftJoy() {
-        return leftJoy.getY();
+        return controller.getRawAxis(1);
     }
 
     public double getRightJoy() {
-        return rightJoy.getY();
+        return -controller.getRawAxis(5);
     }
 }
