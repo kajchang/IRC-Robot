@@ -5,10 +5,10 @@ import edu.wpi.first.wpilibj.command.TimedCommand;
 import frc.team4159.robot.Robot;
 import frc.team4159.robot.subsystems.Drivetrain;
 
-public class DriveForward extends TimedCommand {
+public class TurnRight extends TimedCommand {
     private Drivetrain drivetrain;
 
-    public DriveForward(double time) {
+    public TurnRight(double time) {
         super(time);
         drivetrain = Robot.getDrivetrain();
         requires(drivetrain);
@@ -16,7 +16,7 @@ public class DriveForward extends TimedCommand {
 
     @Override
     protected void execute() {
-        drivetrain.setSpeed(1, 1);
+        drivetrain.setSpeed(1, 0);
     }
 
     @Override
