@@ -21,11 +21,11 @@ public class OI {
     }
 
     public double getLeftJoy() {
-        return -controller.getY(GenericHID.Hand.kLeft);
+        return controller.getY(GenericHID.Hand.kLeft);
     }
 
     public double getRightJoy() {
-        return -controller.getY(GenericHID.Hand.kRight);
+        return controller.getY(GenericHID.Hand.kRight);
     }
 
     public double getArmValue() {
