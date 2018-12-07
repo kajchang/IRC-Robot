@@ -25,7 +25,7 @@ public class OI {
     }
 
     public double getRightJoy() {
-        return controller.getY(GenericHID.Hand.kRight);
+        return -controller.getY(GenericHID.Hand.kRight);
     }
 
     public double getArmValue() {

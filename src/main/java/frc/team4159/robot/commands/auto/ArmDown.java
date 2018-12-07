@@ -3,25 +3,25 @@ package frc.team4159.robot.commands.auto;
 import edu.wpi.first.wpilibj.command.TimedCommand;
 
 import frc.team4159.robot.Robot;
-import frc.team4159.robot.subsystems.Drivetrain;
+import frc.team4159.robot.subsystems.Arm;
 
-public class DriveForward extends TimedCommand {
-    private Drivetrain drivetrain;
+public class ArmDown extends TimedCommand {
+    private Arm arm;
 
-    public DriveForward(double time) {
+    public ArmDown(double time) {
         super(time);
-        drivetrain = Robot.getDrivetrain();
-        requires(drivetrain);
+        arm = Robot.getArm();
+        requires(arm);
     }
 
     @Override
     protected void execute() {
-        drivetrain.setSpeed(0.25, 0.25);
+        arm.setArmSpeed(-1);
     }
 
     @Override
     protected void end() {
-        drivetrain.setSpeed(0, 0);
+        arm.setArmSpeed(0);
     }
 
     @Override
