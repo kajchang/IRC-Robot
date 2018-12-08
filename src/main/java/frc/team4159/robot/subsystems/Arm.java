@@ -28,6 +28,6 @@ public class Arm extends Subsystem {
 
     @Override
     protected void initDefaultCommand() {
-        new MoveArm();
+        setDefaultCommand(new MoveArm());
     }
 }

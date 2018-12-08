@@ -25,8 +25,8 @@ public class Drivetrain extends Subsystem {
     }
 
     public void setSpeed(double left, double right) {
-        leftVictor.set(left);
-        rightVictor.set(-right);
+        leftVictor.set(-left);
+        rightVictor.set(right);
     }
 
     @Override

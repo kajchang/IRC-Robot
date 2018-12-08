@@ -21,18 +21,18 @@ public class OI {
     }
 
     public double getLeftJoy() {
-        return controller.getY(GenericHID.Hand.kLeft);
+        return -controller.getY(GenericHID.Hand.kLeft) / 2;
     }
 
     public double getRightJoy() {
-        return controller.getY(GenericHID.Hand.kRight);
+        return -controller.getY(GenericHID.Hand.kRight) / 2;
     }
 
     public double getArmValue() {
         if (controller.getTriggerAxis(GenericHID.Hand.kRight) > 0) {
-            return 1;
+            return 0.5;
         } else if (controller.getTriggerAxis(GenericHID.Hand.kLeft) > 0) {
-            return -1;
+            return -0.5;
         } else {
             return 0;
         }

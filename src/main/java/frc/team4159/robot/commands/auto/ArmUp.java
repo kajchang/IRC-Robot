@@ -16,7 +16,7 @@ public class ArmUp extends TimedCommand {
 
     @Override
     protected void execute() {
-        arm.setArmSpeed(1);
+        arm.setArmSpeed(0.5);
     }
 
     @Override

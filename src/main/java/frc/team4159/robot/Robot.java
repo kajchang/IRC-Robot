@@ -19,7 +19,7 @@ public class Robot extends TimedRobot {
     public void robotInit() {
         drivetrain = Drivetrain.getInstance();
         oi = OI.getInstance();
-        arm = arm.getInstance();
+        arm = Arm.getInstance();
 
         autoCommand = new Auto();
     }
